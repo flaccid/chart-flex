@@ -142,6 +142,20 @@ Completely remove the chart:
 This is the default workload type. Set values as required, most of which are directly from `helm create`.
 To disable it (usually the case when using other workload type(s)), set the `deployment` value to `false`.
 
+Example using ingress, service and load balancer:
+
+```
+deployment:
+  enabled: true
+ingress:
+  enabled: true
+  hosts:
+    - host: flex.local
+      paths: ["/"]
+service:
+  enabled: true
+  type: LoadBalancer
+```
 
 #### `ReplicaSet`
 
