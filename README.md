@@ -18,6 +18,8 @@ An attempt to cover the main workload resources in once chart:
 TODO:
 - look at `ReplicationController`
 - make the `NOTES.txt` and `_helpers.tpl` work nicely based on chosen workload type(s)
+- tests with terratest
+- make jobs an array like cronjobs without boolean toggle
 
 ## Prerequisites
 
@@ -153,13 +155,41 @@ Set `daemonset.enabled` to `true`.
 
 #### `Job`
 
-Set `job.enabled` to `true`.
-
 This is adapted from https://github.com/cetic/helm-job.
+
+Disable the deployment, setup a job as required, e.g.:
+
+```
+deployment:
+  enabled: false
+job:
+  enabled: true
+image:
+  repository: "hello-world"
+  tag: "latest"
+```
 
 #### `CronJob`
 
-Set `cronjob.enabled` to `true`.
+This is adapated from https://github.com/bambash/helm-cronjobs.
+
+Disable the deployment and set one or more cron jobs as required, e.g.:
+
+```
+deployment:
+  enabled: false
+cronjobs:
+  - name: 'hello-world'
+    image:
+      repository: hello-world
+      tag: latest
+      imagePullPolicy: Always
+    schedule: "*/5 * * * *"
+    failedJobsHistoryLimit: 5
+    successfulJobsHistoryLimit: 100
+    concurrencyPolicy: Allow
+    restartPolicy: OnFailure
+```
 
 ## Contributing
 
