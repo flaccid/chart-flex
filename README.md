@@ -139,7 +139,9 @@ Completely remove the chart:
 
 #### `Deployment`
 
-This is the default workload type. To disable it, set the `deployment` value to `false`.
+This is the default workload type. Set values as required, most of which are directly from `helm create`.
+To disable it (usually the case when using other workload type(s)), set the `deployment` value to `false`.
+
 
 #### `ReplicaSet`
 
