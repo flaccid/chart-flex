@@ -103,7 +103,7 @@ Or, with some different values:
 helm install flex \
   --set image.tag="latest" \
   --set service.type="LoadBalancer" \
-    ,
+    .
 ```
 
 Or, the same but with a custom values from a file:
