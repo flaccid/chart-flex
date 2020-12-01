@@ -1,10 +1,8 @@
-{{- if .Values.cronjob.enabled }}
-
 {{- $chart_name := .Chart.Name }}
 {{- $chart_version := .Chart.Version | replace "+" "_" }}
 {{- $release_name := .Release.Name }}
 
-{{- range $job := .Values.jobs }}
+{{- range $job := .Values.cronjobs }}
 ---
 apiVersion: batch/v1beta1
 kind: CronJob
@@ -23,9 +21,11 @@ spec:
             app: {{ $release_name }}
             cron: {{ $job.name }}
         spec:
-          {{- if $job.securityContext.runAsUser }}
+          {{- if $job.securityContext }}
           securityContext:
+            {{- if $job.securityContext.runAsUser }}
             runAsUser: {{ $job.securityContext.runAsUser }}
+            {{- end }}
             {{- if $job.securityContext.runAsGroup }}
             runAsGroup: {{ $job.securityContext.runAsGroup }}
             {{- end }}
@@ -76,5 +76,3 @@ spec:
   schedule: {{ $job.schedule | quote }}
   successfulJobsHistoryLimit: {{ $job.successfulJobsHistoryLimit }}
 {{- end }}
-
-{{- end -}}
