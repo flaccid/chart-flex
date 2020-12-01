@@ -1,5 +1,8 @@
 # chart-flex
-An example of a flexible Helm chart which could help developers
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+An example of a flexible Helm chart that could help developers easily deploy their software using the one boilerplate chart for different types of workloads.
 
 ## Overview
 
@@ -16,11 +19,59 @@ TODO:
 - look at `ReplicationController`
 - make the `NOTES.txt` and `_helpers.tpl` work nicely based on chosen workload type(s)
 
+## Prerequisites
+
+- Kubernetes >= 1.10.0
+- Helm >= 3.0.0
+
 ## Usage
 
 You can use the chart directly and override the image etc. though typically you would make a copy and edit.
 
-<values table>
+### Values Reference
+
+The following table lists the configurable parameters of the flex chart and the default values.
+
+| Parameter           | Description                          | Default         |
+| ------------------- | -------------------------------------| --------------- |
+| `affinity`              |                                    | `{}`            |
+| `autoscaling.enabled` |                                    | `false`         |
+| `autoscaling.minReplicas` |                                | `1`             |
+| `autoscaling/maxReplicas` |                                | `100`           |
+| `autoscaling.targetCPUUtilizationPercentage` |             | `80`            |
+| `autoscaling.targetMemoryUtilizationPercentage` |          |                 |
+| `cronjob.enabled`     |                                    | `false`         |
+| `daemonset.enabled`   |                                    | `false`         |
+| `deployment.enabled`  |                                    | `true`          |
+| `fullnameOverride`    |                                    |                 |
+| `global.environment`  |                                    | `[]`            |
+| `imagePullSecrets`    |                                    | `[]`            |
+| `image.pullPolicy`    |                                    | `IfNotPresent`  |
+| `image.repository`    |                                    | `nginx`         |
+| `image.tag`           |                                    | `stable`        |
+| `ingress.enabled`     |                                    | `false`         |
+| `ingress.annotations` |                                    | `{}`            |
+| `ingress.hosts`       |                                    | `[{ host: chart-example.local, paths: {  } }]` |
+| `ingress.tls`         |                                    | `[]`            |
+| `job.enabled`         |                                    | `false`         |
+| `job.restartPolicy`   |                                    | `OnFailure`     |
+| `nameOverride`        |                                    |                 |
+| `nodeSelector`        |                                    | `{}`            |
+| `podAnnotations`      |                                    | `{}`            |
+| `podSecurityContext`  |                                    | `{}`            |
+| `replicaCount`        |                                    | `1`             |
+| `replicaset.enabled`  |                                    | `false`         |
+| `resources`           |                                    | `{}`            |
+| `securityContext`     |                                    | `{}`            |
+| `serviceAccount.annotations` | Annotations to add to the service account | `{}` |
+| `serviceAccount.create` | Specifies whether a service account should be created | `true` |
+| `serviceAccount.name` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template | |
+| `service.port`        |                                    | `80`            |
+| `service.type`        |                                    | `ClusterIP`     |
+| `statefulset.enabled` |                                    | `false`         |
+| `tolerations`         |                                    | `[]`            |
+
+### Quick Guide
 
 Validate the chart:
 
@@ -40,7 +91,7 @@ helm install \
     flex .
 ```
 
-Install the chart:
+#### Installation
 
 `helm install flex .`
 
@@ -61,6 +112,14 @@ helm install flex \
     .
 ```
 
+#### Testing
+
+Testing after creation of a release:
+
+`helm test flex`
+
+#### Upgrading
+
 Upgrade the chart, with values file:
 
 ```
@@ -68,34 +127,60 @@ helm upgrade flex . \
   -f helm-values.local.yaml
 ```
 
-Testing after deployment:
-
-`helm test flex`
+#### Uninstallation
 
 Completely remove the chart:
 
 `helm uninstall flex`
 
-### `Deployment`
+### Workload Type Switching
 
-This is the default workload type. To disable it, set the `deployment` value to false.
+#### `Deployment`
 
-### `ReplicaSet`
+This is the default workload type. To disable it, set the `deployment` value to `false`.
+
+#### `ReplicaSet`
 
 Set `replicaset.enabled` to `true`.
 
-### `StatefulSet`
+#### `StatefulSet`
 
 Set `statefulset.enabled` to `true`.
 
-### `DaemonSet`
+#### `DaemonSet`
 
 Set `daemonset.enabled` to `true`.
 
-### `Job`
+#### `Job`
 
 Set `job.enabled` to `true`.
 
-### `CronJob`
+This is adapted from https://github.com/cetic/helm-job.
+
+#### `CronJob`
 
 Set `cronjob.enabled` to `true`.
+
+## Contributing
+
+Please feel free to contribute by making a [pull request](https://github.com/flaccid/chart-flex/pulls).
+
+## License
+
+- Author: Chris Fordham (<chris@fordham.id.au>)
+
+```text
+Copyright 2020, Chris Fordham
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
