@@ -8,11 +8,14 @@ image:
   repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "stable"
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
+
+global:
+  environment: []
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -83,6 +86,7 @@ cronjob:
 
 job:
   enabled: false
+  restartPolicy: "OnFailure"
 
 replicaset:
   enabled: false
