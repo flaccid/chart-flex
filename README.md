@@ -20,6 +20,7 @@ TODO:
 - make the `NOTES.txt` and `_helpers.tpl` work nicely based on chosen workload type(s)
 - tests with terratest
 - make jobs an array like cronjobs without boolean toggle
+- support multiple containers in the deployment pod besides init containers
 
 ## Prerequisites
 
@@ -55,6 +56,7 @@ The following table lists the configurable parameters of the flex chart and the 
 | `ingress.annotations` |                                    | `{}`            |
 | `ingress.hosts`       |                                    | `[{ host: chart-example.local, paths: {  } }]` |
 | `ingress.tls`         |                                    | `[]`            |
+| `initContainers`      | Init containers to add to the deployment | `[]`      |
 | `job.enabled`         |                                    | `false`         |
 | `job.restartPolicy`   |                                    | `OnFailure`     |
 | `nameOverride`        |                                    |                 |

@@ -76,6 +76,15 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
+# add containers that must run before each of the main containers when a Pod spins up
+# useful for things like pulling down passwords or data that a specific instance of a container needs
+initContainers: []
+#   - name: db_migrate
+#     command: ["/bin/sh", "-c", "rake db:migrate"]
+#     image:
+#       repository: alpine (Optional, will default to image.repository if not specified)
+#       tag: latest          (Optional, will default to image.tag if not specified)
+
 daemonset:
   enabled: false
 

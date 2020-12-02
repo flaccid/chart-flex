@@ -1,3 +1,5 @@
+{{- $image := printf "%s:%s" .Values.image.repository .Values.image.tag -}}
+
 {{- if .Values.deployment.enabled }}
 
 apiVersion: apps/v1
@@ -29,6 +31,18 @@ spec:
       serviceAccountName: {{ include "flex.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+{{- if .Values.initContainers }}
+      initContainers:
+{{- range .Values.initContainers }}
+        - name: {{ .name | replace " " "-" }}
+          command: {{ toJson .command }}
+{{- if hasKey . "image" }}
+          image: {{ .image.repository }}:{{ .image.tag }}
+{{- else }}
+          image: {{ $image }}
+{{- end }}
+{{- end }}
+{{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
