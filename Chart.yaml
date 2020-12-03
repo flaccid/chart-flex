@@ -1,6 +1,18 @@
 apiVersion: v2
 name: flex
 description: An example of a flexible Helm chart which could help developers
+keywords:
+  - http
+  - web
+  - application
+  - cronjbos
+  - jobs
+  - generic
+home: https://github.com/flaccid/chart-flex
+sources:
+  - https://github.com/flaccid/chart-flex
+maintainers: "Chris Fordham <chris@fordham.id.au>"
+icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png
 
 # A chart can be either an 'application' or a 'library' chart.
 #
