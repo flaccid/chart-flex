@@ -1,2 +1,17 @@
 categories:
 - General
+questions:
+- variable: deployment.enabled
+  default: "true"
+  description: "Enable the Deployment resource"
+  type: boolean
+  required: true
+  label: Deployment Enabled
+  show_subquestion_if: true
+  group: "Workload Settings"
+  subquestions:
+  - variable: deployment.ingress
+    default: "false"
+    description: "Enable the Ingress resource"
+    type: string
+    label: Ingress
