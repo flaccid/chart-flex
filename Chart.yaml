@@ -11,7 +11,10 @@ keywords:
 home: https://github.com/flaccid/chart-flex
 sources:
   - https://github.com/flaccid/chart-flex
-maintainers: "Chris Fordham <chris@fordham.id.au>"
+maintainers:
+  - name: Chris Fordham
+    email: chris@fordham.id.au
+    url: https://github.com/flaccid/
 icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png
 
 # A chart can be either an 'application' or a 'library' chart.
