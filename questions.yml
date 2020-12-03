@@ -74,5 +74,5 @@ questions:
   description: "Default image pull policy used for workloads"
   type: enum
   required: true
-  label: Image Repository
+  label: Image Pull Policy
   group: Primary Image
