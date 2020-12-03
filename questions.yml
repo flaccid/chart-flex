@@ -45,3 +45,27 @@ questions:
     - NodePort
     - LoadBalancer
     - ExternalName
+  - variable: image.repository
+    default: "nginx"
+    description: "Default image repository used for workloads"
+    type: string
+    required: true
+    label: Image Repository
+    group: Primary Image
+  - variable: image.tag
+    default: "stable"
+    description: "Default image tag used for workloads"
+    type: string
+    required: true
+    label: Image Tag
+    group: Primary Image
+  - variable: image.pullPolicy
+    default: "IfNotPresent"
+    options:
+    - IfNotPresent
+    - Always
+    description: "Default image pull policy used for workloads"
+    type: enum
+    required: true
+    label: Image Repository
+    group: Primary Image
