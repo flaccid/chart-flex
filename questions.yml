@@ -8,12 +8,19 @@ questions:
   required: true
   label: Deployment Enabled
   group: "Workload Settings"
-- variable: ingress.enabled
-  default: "false"
-  description: "Enable the Ingress resource"
-  type: boolean
-  label: Ingress
-  group: "Workload Settings"
+# this is not possible until https://github.com/rancher/rancher/issues/13952 is solved
+# - variable: ingress.enabled
+#   default: "false"
+#   description: "Enable the Ingress resource"
+#   type: boolean
+#   label: Ingress
+#   group: "Workload Settings"
+#   show_subquestion_if: true
+#   subquestions:
+#   - variable: ingress.hosts.host
+#     default:
+#     type: string
+#     label: Ingress Hosts
 - variable: service.enabled
   default: "false"
   description: "Enable the Service resource"
