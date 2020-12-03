@@ -32,7 +32,7 @@ questions:
   - variable: service.type
     default: ClusterIP
     description: The type of service to expose
-    type: enabme
+    type: enum
     label: "Service Type"
     options:
     - ClusterIP
