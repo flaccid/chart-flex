@@ -59,6 +59,13 @@ questions:
   required: true
   label: Image Tag
   group: Primary Image
+- variable: image.containerPort
+  description: "Default port listening from the container image"
+  default: 80
+  type: int
+  required: true
+  label: Image/Container Port
+  group: Primary Image
 - variable: image.pullPolicy
   default: "IfNotPresent"
   options:
