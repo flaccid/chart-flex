@@ -76,3 +76,15 @@ questions:
   required: true
   label: Image Pull Policy
   group: Primary Image
+- variable: image.command
+  description: "Override the default command used in the image"
+  type: string
+  required: false
+  label: Image Command
+  group: Primary Image
+- variable: image.args
+  description: "Override the default arguments used in the image"
+  type: string
+  required: false
+  label: Image Arguments
+  group: Primary Image
