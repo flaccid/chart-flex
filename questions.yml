@@ -32,5 +32,10 @@ questions:
   - variable: service.type
     default: ClusterIP
     description: The type of service to expose
-    type: string
+    type: enabme
     label: "Service Type"
+    options:
+    - ClusterIP
+    - NodePort
+    - LoadBalancer
+    - ExternalName
