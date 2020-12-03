@@ -13,5 +13,24 @@ questions:
   - variable: deployment.ingress
     default: "false"
     description: "Enable the Ingress resource"
-    type: string
+    type: boolean
     label: Ingress
+- variable: service.enabled
+  default: "false"
+  description: "Enable the Service resource"
+  type: boolean
+  required: true
+  label: Service Enabled
+  show_subquestion_if: true
+  group: "Workload Settings"
+  subquestions:
+  - variable: service.port
+    default: 80
+    description: Port used by the service
+    type: int
+    label: Service Port
+  - variable: service.type
+    default: ClusterIP
+    description: The type of service to expose
+    type: string
+    label: "Service Type"
