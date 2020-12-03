@@ -7,14 +7,13 @@ questions:
   type: boolean
   required: true
   label: Deployment Enabled
-  show_subquestion_if: true
   group: "Workload Settings"
-  subquestions:
-  - variable: deployment.ingress
-    default: "false"
-    description: "Enable the Ingress resource"
-    type: boolean
-    label: Ingress
+- variable: ingress.enabled
+  default: "false"
+  description: "Enable the Ingress resource"
+  type: boolean
+  label: Ingress
+  group: "Workload Settings"
 - variable: service.enabled
   default: "false"
   description: "Enable the Service resource"
