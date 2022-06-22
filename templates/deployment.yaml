@@ -55,6 +55,12 @@ spec:
           {{- if .Values.args }}
           args: {{ .Values.args }}
           {{- end }}
+          {{- if .Values.stdin.enabled }}
+          stdin: true
+          {{- end }}
+          {{- if .Values.tty.enabled }}
+          tty: true
+          {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.image.containerPort }}

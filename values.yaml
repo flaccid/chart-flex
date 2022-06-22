@@ -13,6 +13,10 @@ image:
 
 command: []
 args: []
+stdin:
+  enabled: false
+tty:
+  enabled: false
 
 imagePullSecrets: []
 nameOverride: ""
