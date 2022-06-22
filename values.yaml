@@ -17,6 +17,8 @@ stdin:
   enabled: false
 tty:
   enabled: false
+probes:
+  enabled: true
 
 imagePullSecrets: []
 nameOverride: ""
