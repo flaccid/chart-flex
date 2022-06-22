@@ -11,8 +11,8 @@ image:
   tag: "stable"
   containerPort: 80
 
-command: ""
-args: ""
+command: []
+args: []
 
 imagePullSecrets: []
 nameOverride: ""
