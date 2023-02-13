@@ -1,9 +1,12 @@
 # chart-flex
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 ![Mr. Clean](https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png)
 
-An example of a flexible Helm chart that could help developers easily deploy their software using the one boilerplate chart for different types of workloads.
+A flexible Helm chart that is useful for developers to easily deploy various software using a single chart; the objective is to cater for different types of workloads.
+
+But, really, its handy for anyone wanting to quickly deploy an arbitrary workload.
 
 ## Overview
 
