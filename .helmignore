@@ -1,0 +1,5 @@
+*.git
+.banner
+.gitignore
+*.tgz
+Makefile
