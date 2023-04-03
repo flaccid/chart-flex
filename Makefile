@@ -43,6 +43,12 @@ helm-validate:: ## runs a lint on the helm chart
 			--namespace default \
 				.
 
+helm-package:: ## packages the helm chart into an archive
+		@helm package .
+
+helm-index:: ## creates/updates the helm repo index file
+		@helm repo index --url https://flaccid.github.io/chart-flex/ .
+
 # a help target including self-documenting targets (see the awk statement)
 define HELP_TEXT
 Usage: make [TARGET]... [MAKEVAR1=SOMETHING]...
