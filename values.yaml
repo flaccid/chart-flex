@@ -53,6 +53,7 @@ service:
   enabled: false
   port: 80
   type: ClusterIP
+  annotations: {}
 
 ingress:
   enabled: false

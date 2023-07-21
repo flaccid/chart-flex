@@ -4,6 +4,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "flex.fullname" . }}
+  {{- with .Values.service.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   labels:
     {{- include "flex.labels" . | nindent 4 }}
 spec:
