@@ -9,7 +9,11 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "stable"
-  containerPort: 80
+
+container:
+  name: http
+  port: 80
+  protocol: TCP
 
 command: []
 args: []

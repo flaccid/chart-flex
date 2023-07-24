@@ -62,9 +62,9 @@ spec:
           tty: true
           {{- end }}
           ports:
-            - name: http
-              containerPort: {{ .Values.image.containerPort }}
-              protocol: TCP
+            - name: {{ .Values.container.name }}
+              containerPort: {{ .Values.container.port }}
+              protocol: {{ .Values.container.protocol }}
           {{- if .Values.probes.enabled }}
           livenessProbe:
             httpGet:
