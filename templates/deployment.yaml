@@ -61,6 +61,8 @@ spec:
           {{- if .Values.tty.enabled }}
           tty: true
           {{- end }}
+          env:
+            {{- toYaml .Values.container.env | nindent 12 }}
           ports:
             - name: {{ .Values.container.name }}
               containerPort: {{ .Values.container.port }}
