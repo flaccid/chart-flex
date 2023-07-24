@@ -10,7 +10,7 @@ But, really, its handy for anyone wanting to quickly deploy an arbitrary workloa
 
 ## Overview
 
-An attempt to cover the main workload resources in once chart:
+An attempt to cover the main workload resources in one chart:
 
 - `Deployment`
 - `ReplicaSet`
