@@ -3,7 +3,32 @@ entries:
   flex:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-07-24T13:23:31.557121077+10:00"
+    created: "2023-07-24T13:32:00.605483497+10:00"
+    description: An example of a flexible Helm chart which could help developers
+    digest: 1845cc0280e2fe50d977b7e6a9bbbde47905ee4792ebd6afe8d8e42ff1c14c9b
+    home: https://github.com/flaccid/chart-flex
+    icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png
+    keywords:
+    - http
+    - web
+    - application
+    - cronjbos
+    - jobs
+    - generic
+    maintainers:
+    - email: chris@fordham.id.au
+      name: Chris Fordham
+      url: https://github.com/flaccid/
+    name: flex
+    sources:
+    - https://github.com/flaccid/chart-flex
+    type: application
+    urls:
+    - https://flaccid.github.io/chart-flex/flex-0.6.1.tgz
+    version: 0.6.1
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-07-24T13:32:00.59714462+10:00"
     description: An example of a flexible Helm chart which could help developers
     digest: c4d2a5c0c4a2f15e361dfcbfa19973b3396daaec7457b064acddae88ebe48c52
     home: https://github.com/flaccid/chart-flex
@@ -28,7 +53,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-07-24T13:23:31.54780971+10:00"
+    created: "2023-07-24T13:32:00.589116678+10:00"
     description: An example of a flexible Helm chart which could help developers
     digest: 9c64833e0f0a3e0aae49e1ffb192a7c56fb17ab67bbdedfc8b233f5e34d66ce3
     home: https://github.com/flaccid/chart-flex
@@ -53,7 +78,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-07-24T13:23:31.53369927+10:00"
+    created: "2023-07-24T13:32:00.579890075+10:00"
     description: An example of a flexible Helm chart which could help developers
     digest: e9d06902e16efa03cf830a2765679c07b573a35274270fa990489e6a9db1f09d
     home: https://github.com/flaccid/chart-flex
@@ -76,4 +101,4 @@ entries:
     urls:
     - https://flaccid.github.io/chart-flex/flex-0.4.0.tgz
     version: 0.4.0
-generated: "2023-07-24T13:23:31.518312122+10:00"
+generated: "2023-07-24T13:32:00.571030814+10:00"

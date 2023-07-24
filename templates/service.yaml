@@ -14,9 +14,9 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+      targetPort: {{ .Values.container.port }}
+      protocol: {{ .Values.container.protocol }}
+      name: {{ .Values.container.name }}
   selector:
     {{- include "flex.selectorLabels" . | nindent 4 }}
 
