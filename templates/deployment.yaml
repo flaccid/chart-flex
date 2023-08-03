@@ -53,7 +53,10 @@ spec:
           command: {{ .Values.command }}
           {{- end }}
           {{- if .Values.args }}
-          args: {{ .Values.args }}
+          args:
+          {{- range .Values.args }}
+            - {{ . }}
+          {{- end }}
           {{- end }}
           {{- if .Values.stdin.enabled }}
           stdin: true
