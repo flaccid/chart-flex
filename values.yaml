@@ -123,6 +123,8 @@ replicaset:
 statefulset:
   enabled: false
 
+cronjobs: []
+
 nodeSelector: {}
 
 tolerations: []

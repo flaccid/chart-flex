@@ -3,9 +3,9 @@ entries:
   flex:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-08-03T18:30:12.098424114+10:00"
+    created: "2024-04-16T15:30:27.3573366+10:00"
     description: An example of a flexible Helm chart which could help developers
-    digest: 530ff90f4e183ee92081a0e83bf229d5a1df4ed0d201d2e902bea51dd6600feb
+    digest: 83c61d9569789439f9b27834bbbfdad6943d3a74f49ae4daf8afb8ae0e676fc4
     home: https://github.com/flaccid/chart-flex
     icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png
     keywords:
@@ -24,56 +24,6 @@ entries:
     - https://github.com/flaccid/chart-flex
     type: application
     urls:
-    - https://flaccid.github.io/chart-flex/flex-0.7.1.tgz
-    version: 0.7.1
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2023-08-03T18:30:12.086304163+10:00"
-    description: An example of a flexible Helm chart which could help developers
-    digest: e8c086118a44061d4560b2241009042b1c58adc296c17ffebcdab82983d3183c
-    home: https://github.com/flaccid/chart-flex
-    icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png
-    keywords:
-    - http
-    - web
-    - application
-    - cronjbos
-    - jobs
-    - generic
-    maintainers:
-    - email: chris@fordham.id.au
-      name: Chris Fordham
-      url: https://github.com/flaccid/
-    name: flex
-    sources:
-    - https://github.com/flaccid/chart-flex
-    type: application
-    urls:
-    - https://flaccid.github.io/chart-flex/flex-0.7.0.tgz
-    version: 0.7.0
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2023-08-03T18:30:12.062544415+10:00"
-    description: An example of a flexible Helm chart which could help developers
-    digest: 1845cc0280e2fe50d977b7e6a9bbbde47905ee4792ebd6afe8d8e42ff1c14c9b
-    home: https://github.com/flaccid/chart-flex
-    icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png
-    keywords:
-    - http
-    - web
-    - application
-    - cronjbos
-    - jobs
-    - generic
-    maintainers:
-    - email: chris@fordham.id.au
-      name: Chris Fordham
-      url: https://github.com/flaccid/
-    name: flex
-    sources:
-    - https://github.com/flaccid/chart-flex
-    type: application
-    urls:
-    - https://flaccid.github.io/chart-flex/flex-0.6.1.tgz
-    version: 0.6.1
-generated: "2023-08-03T18:30:12.046954906+10:00"
+    - https://flaccid.github.io/chart-flex/flex-0.7.2.tgz
+    version: 0.7.2
+generated: "2024-04-16T15:30:27.35222193+10:00"
