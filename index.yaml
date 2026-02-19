@@ -3,9 +3,9 @@ entries:
   flex:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-04-16T15:30:27.3573366+10:00"
+    created: "2026-02-19T18:44:51.477419623+11:00"
     description: An example of a flexible Helm chart which could help developers
-    digest: 83c61d9569789439f9b27834bbbfdad6943d3a74f49ae4daf8afb8ae0e676fc4
+    digest: f6d275f6b499ad8084a0906b0f1c7cf52488e5c2fec82dfe92183787e1794f7c
     home: https://github.com/flaccid/chart-flex
     icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png
     keywords:
@@ -24,6 +24,6 @@ entries:
     - https://github.com/flaccid/chart-flex
     type: application
     urls:
-    - https://flaccid.github.io/chart-flex/flex-0.7.2.tgz
-    version: 0.7.2
-generated: "2024-04-16T15:30:27.35222193+10:00"
+    - https://flaccid.github.io/chart-flex/flex-0.7.3.tgz
+    version: 0.7.3
+generated: "2026-02-19T18:44:51.476259144+11:00"
