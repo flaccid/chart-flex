@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-![Mr. Clean](https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png)
+![Mr. Clean](https://upload.wikimedia.org/wikipedia/en/7/73/Mr._Clean_logo.png)
 
 A flexible Helm chart that is useful for developers to easily deploy various software using a single chart; the objective is to cater for different types of workloads.
 
