@@ -8,19 +8,21 @@ questions:
   required: true
   label: Deployment Enabled
   group: "Workload Settings"
-# this is not possible until https://github.com/rancher/rancher/issues/13952 is solved
-# - variable: ingress.enabled
-#   default: "false"
-#   description: "Enable the Ingress resource"
-#   type: boolean
-#   label: Ingress
-#   group: "Workload Settings"
-#   show_subquestion_if: true
-#   subquestions:
-#   - variable: ingress.hosts.host
-#     default:
-#     type: string
-#     label: Ingress Hosts
+- variable: ingress.enabled
+  default: "false"
+  description: "Enable the Ingress resource"
+  type: boolean
+  label: Ingress
+  group: "Workload Settings"
+  show_subquestion_if: true
+  subquestions:
+  - variable: ingress.className
+    default: ""
+    description: "IngressClassName for the Ingress resource (Kubernetes >= 1.19)"
+    type: string
+    label: Ingress Class Name
+  # ingress.hosts cannot be set from the Rancher UI until
+  # https://github.com/rancher/rancher/issues/13952 (array type questions) is solved
 - variable: service.enabled
   default: "false"
   description: "Enable the Service resource"

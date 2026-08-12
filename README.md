@@ -28,7 +28,7 @@ TODO:
 
 ## Prerequisites
 
-- Kubernetes >= 1.10.0
+- Kubernetes >= 1.19.0
 - Helm >= 3.0.0
 
 ## Usage
@@ -57,8 +57,9 @@ The following table lists the configurable parameters of the flex chart and the 
 | `image.repository`    |                                    | `nginx`         |
 | `image.tag`           |                                    | `stable`        |
 | `ingress.enabled`     |                                    | `false`         |
+| `ingress.className`   |                                    |                 |
 | `ingress.annotations` |                                    | `{}`            |
-| `ingress.hosts`       |                                    | `[{ host: chart-example.local, paths: {  } }]` |
+| `ingress.hosts`       |                                    | `[{ host: chart-example.local, paths: [{ path: /, pathType: ImplementationSpecific }] }]` |
 | `ingress.tls`         |                                    | `[]`            |
 | `initContainers`      | Init containers to add to the deployment | `[]`      |
 | `job.enabled`         |                                    | `false`         |
@@ -155,9 +156,12 @@ deployment:
   enabled: true
 ingress:
   enabled: true
+  className: nginx
   hosts:
     - host: flex.local
-      paths: ["/"]
+      paths:
+        - path: /
+          pathType: Prefix
 service:
   enabled: true
   type: LoadBalancer
