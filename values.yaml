@@ -24,6 +24,21 @@ tty:
   enabled: false
 probes:
   enabled: true
+  # Deployment workload only. Defaults preserve the historical hardcoded probe.
+  liveness:
+    path: /
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    timeoutSeconds: 1
+    successThreshold: 1
+    failureThreshold: 3
+  readiness:
+    path: /
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    timeoutSeconds: 1
+    successThreshold: 1
+    failureThreshold: 3
 
 imagePullSecrets: []
 nameOverride: ""
