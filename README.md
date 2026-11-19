@@ -50,6 +50,8 @@ The following table lists the configurable parameters of the flex chart and the 
 | `cronjob.enabled`     |                                    | `false`         |
 | `daemonset.enabled`   |                                    | `false`         |
 | `deployment.enabled`  |                                    | `true`          |
+| `deployment.volumes`  | Kubernetes volumes for Deployment pods | `[]`        |
+| `deployment.volumeMounts` | Volume mounts for the Deployment's main container | `[]` |
 | `fullnameOverride`    |                                    |                 |
 | `global.environment`  |                                    | `[]`            |
 | `imagePullSecrets`    |                                    | `[]`            |
@@ -79,6 +81,31 @@ The following table lists the configurable parameters of the flex chart and the 
 | `service.type`        |                                    | `ClusterIP`     |
 | `statefulset.enabled` |                                    | `false`         |
 | `tolerations`         |                                    | `[]`            |
+
+### Mounting files in a Deployment
+
+Use native Kubernetes volume and mount fields. For example, project selected
+keys from an existing Secret into the main container:
+
+```yaml
+deployment:
+  volumes:
+    - name: client-tls
+      secret:
+        secretName: existing-client-tls
+        items:
+          - key: tls.crt
+            path: client.crt
+          - key: tls.key
+            path: client.key
+  volumeMounts:
+    - name: client-tls
+      mountPath: /run/client-tls
+      readOnly: true
+```
+
+The chart does not create the Secret or require its contents in Helm values.
+These options do not affect init containers or other workload types.
 
 ### Quick Guide
 

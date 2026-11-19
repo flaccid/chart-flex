@@ -124,6 +124,10 @@ daemonset:
 
 deployment:
   enabled: true
+  # Kubernetes Volume entries for the Deployment pod.
+  volumes: []
+  # Kubernetes VolumeMount entries for the Deployment's main container.
+  volumeMounts: []
 
 cronjob:
   enabled: false
