@@ -3,6 +3,31 @@ entries:
   flex:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2026-11-19T23:08:03.591391458+11:00"
+    description: An example of a flexible Helm chart which could help developers
+    digest: 726c6387b8e0222538c0e1ab053e72fdc91b5936e63546925755aa58319e298f
+    home: https://github.com/flaccid/chart-flex
+    icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Mr._Clean_logo.png/220px-Mr._Clean_logo.png
+    keywords:
+    - http
+    - web
+    - application
+    - cronjbos
+    - jobs
+    - generic
+    maintainers:
+    - email: chris@fordham.id.au
+      name: Chris Fordham
+      url: https://github.com/flaccid/
+    name: flex
+    sources:
+    - https://github.com/flaccid/chart-flex
+    type: application
+    urls:
+    - https://flaccid.github.io/chart-flex/flex-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2026-11-01T20:19:26.034746785+11:00"
     description: An example of a flexible Helm chart which could help developers
     digest: c449c603f910e80613396d8f4e996d736278693829e66c213af8154ef5731d42
@@ -26,4 +51,4 @@ entries:
     urls:
     - https://flaccid.github.io/chart-flex/flex-0.9.0.tgz
     version: 0.9.0
-generated: "2026-11-01T20:19:26.034176113+11:00"
+generated: "2026-11-19T23:08:03.590855048+11:00"
